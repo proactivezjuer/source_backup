@@ -1,0 +1,85 @@
+%文档类型，openany新章节可以从偶数页开始
+\documentclass[11pt, a4paper, twoside, openany]{book}
+%支持中文
+\usepackage{xeCJK}
+%中文字体使用宋体
+\setCJKmainfont{SimSun}
+%英文字体全部使用Times
+\setmainfont{Times New Roman}
+%设置链接样式
+\usepackage[urlcolor = blue, linkcolor=black, colorlinks = true]{hyperref}
+%插入图片
+\usepackage{graphicx}
+%左右留白一样
+\usepackage{fullpage}
+
+%-----------------------------页眉页脚-----------------------------------
+\usepackage{fancyhdr}                    % 页眉页脚相关宏包
+\pagestyle{fancy}                        % 页眉页脚风格
+
+%文档开始
+\begin{document}
+
+%书的标题和作者，默认当前日期
+\title{latex学习笔记}
+\author{zenloner}
+\maketitle
+%标题结束
+
+%生成目录，需要编译两次目录才是正确的
+%\tableofcontents\newpage
+\tableofcontents
+%设置段落间距
+\setlength{\parskip}{1em}
+
+%张节开始
+\chapter{章节开始}
+%一级标题
+\section{一级标题}
+一级标题的开始部分一级标题的开始部分一级标题的开始部分一级标题的开始部分一级标题的开始部分一级标题的开始部分
+
+一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段
+
+一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段一个空白行表示分段
+
+%二级标题
+\subsection{二级标题}
+二级标题的开始部分
+
+%--------------------------------注释------------------------------------
+\iffalse % 将这里改为\iftrue即可使用
+%注释掉一段内容
+This is a comment example.
+\fi
+
+\section{其他人的模板}
+\TeX{}~是由图灵奖得主\index{Knuth, Donald E.}~Donald E. Knuth
+编写的计算机程序，用于文章和数学公式的排版。
+1977~年~Knuth~开始编写~\TeX{}~排版系统引擎的时候，\\ % 换行
+是为了探索当时正开始进入出版工业的数字印刷设备的潜力。 \newline % 换行
+他特别希望能因此扭转那种排版质量下降的趋势，使自己写的书和文章免受其害。
+% 下面是特殊字符 # $ % ^ & _ { } ~ \  ... 的输入
+\# \$ \% \^{} \& \_ \{ \} \~{} $\backslash$ \ldots
+
+\section{图片}
+插入图片
+\begin{figure}[htb]
+\centering
+\includegraphics{./img/logo.png}
+\caption{Local version control diagram}
+\end{figure}
+\section{code}
+{\footnotesize \begin{quote}\begin{verbatim}
+#include <stdio.h>
+
+int main()
+{
+    printf("hello\n");
+    return 0;
+}
+\end{verbatim}\end{quote}}
+
+
+%文档结束
+\end{document}
+
